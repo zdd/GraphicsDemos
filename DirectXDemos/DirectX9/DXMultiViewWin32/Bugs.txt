@@ -1,0 +1,39 @@
+1 Two kinds of Assert in C/C++, which condition do they use?
+2 Can we share the same message proc for all the child windows?
+3 We can't enable z-buffer when creating additional swap chain? in the code below, the EnableAutoDepthStencil field 
+must be false, why?
+
+// Get display mode
+	D3DDISPLAYMODE d3ddm ;
+	pD3D->GetAdapterDisplayMode(D3DADAPTER_DEFAULT, &d3ddm) ;
+
+	// Initialize D3D presentation parameters
+	D3DPRESENT_PARAMETERS d3dpp ;
+	ZeroMemory(&d3dpp, sizeof(d3dpp)) ;
+	d3dpp.BackBufferCount = 1 ;
+	d3dpp.BackBufferWidth = backBufferWidth ;
+	d3dpp.BackBufferHeight = backBufferWidth ;
+	d3dpp.BackBufferFormat = d3ddm.Format ;
+	d3dpp.hDeviceWindow = hWnd ;
+	d3dpp.SwapEffect = D3DSWAPEFFECT_DISCARD ; // This parameter must be set!!!
+	d3dpp.EnableAutoDepthStencil = FALSE ; // Here must be false!!!, or CreateAdditionalSwapChain will be failed!
+	d3dpp.Windowed = TRUE ;
+	
+	// Create swap chain
+	hr = pDevice->CreateAdditionalSwapChain(&d3dpp, &m_pSwapChain) ;
+	if (FAILED(hr))
+	{
+		DXTRACE_ERR_MSGBOX("Create additional swap chain failed!", hr) ;
+		return ;
+	}
+4 The color order for the four window is not correct, I set the color in the following order
+	Topleft - Red
+	TopRight - Yellow
+	BottomLeft - Blue
+	BottomRight - Green
+ But actualy the order is
+	Topleft - Yellow
+	TopRight - Blue
+	BottomLeft - Green
+	BottomRight - Red
+ This may be cause by the render target index, but I don't find the real reason now
