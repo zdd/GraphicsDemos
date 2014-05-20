@@ -75,13 +75,29 @@ HRESULT InitD3D( HWND hWnd )
 
 	//g_pd3dDevice->SetRenderState(D3DRS_ZENABLE, D3DZB_TRUE) ;
 
-	// Create Texture
+	// Create Texture, this function automatically generate the mipmaps
 	HRESULT hr ;
 	hr = D3DXCreateTextureFromFile(g_pd3dDevice, "../Common/Media/chessboard.jpg", &g_pTexture) ;
 	if (FAILED(hr))
 	{
 		MessageBoxA(NULL, "Create Texture failed!", "Error", 0) ;
 	}
+
+	// Get mipmap level count, the original picture chessboard.jpg is 256 x 256, so the count is 9
+	// Full list of mipmap as below
+	/*
+	256 x 256
+	128 x 128
+	64 x 64
+	32 x 32
+	16 x 16
+	8 x 8
+	4 x 4
+	2 x 2
+	1 x 1
+	*/
+
+	DWORD count = g_pTexture->GetLevelCount();
 	
 	return S_OK;
 }
