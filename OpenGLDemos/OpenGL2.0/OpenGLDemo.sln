@@ -31,6 +31,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "texture_screenquad", "textu
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "fragmentshader_circle", "fragmentshader_circle\fragmentshader_circle.vcxproj", "{8369562D-6C68-4FEF-A3C0-645CFA8A8B4F}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "depth_buffer", "depth_buffer\depth_buffer.vcxproj", "{E5084452-28A8-494D-8778-6807F239DB98}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "face_culling", "face_culling\face_culling.vcxproj", "{3E78EAAB-E349-47F8-A35E-E9526C2B1BBD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -97,6 +101,14 @@ Global
 		{8369562D-6C68-4FEF-A3C0-645CFA8A8B4F}.Debug|Win32.Build.0 = Debug|Win32
 		{8369562D-6C68-4FEF-A3C0-645CFA8A8B4F}.Release|Win32.ActiveCfg = Release|Win32
 		{8369562D-6C68-4FEF-A3C0-645CFA8A8B4F}.Release|Win32.Build.0 = Release|Win32
+		{E5084452-28A8-494D-8778-6807F239DB98}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E5084452-28A8-494D-8778-6807F239DB98}.Debug|Win32.Build.0 = Debug|Win32
+		{E5084452-28A8-494D-8778-6807F239DB98}.Release|Win32.ActiveCfg = Release|Win32
+		{E5084452-28A8-494D-8778-6807F239DB98}.Release|Win32.Build.0 = Release|Win32
+		{3E78EAAB-E349-47F8-A35E-E9526C2B1BBD}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3E78EAAB-E349-47F8-A35E-E9526C2B1BBD}.Debug|Win32.Build.0 = Debug|Win32
+		{3E78EAAB-E349-47F8-A35E-E9526C2B1BBD}.Release|Win32.ActiveCfg = Release|Win32
+		{3E78EAAB-E349-47F8-A35E-E9526C2B1BBD}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
