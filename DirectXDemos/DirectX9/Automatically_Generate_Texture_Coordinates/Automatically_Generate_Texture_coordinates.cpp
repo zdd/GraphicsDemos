@@ -61,9 +61,10 @@ void DrawTeapot()
 
 	HRESULT hr ;
 	hr = g_pd3dDevice->SetTextureStageState(0, D3DTSS_TEXCOORDINDEX, D3DTSS_TCI_SPHEREMAP | 1);
+
 	if(FAILED(hr))
 	{
-		int a = 1;
+		MessageBox(NULL, "Failed to set texture stage state!", "Error", 0);
 	}
 
 	// Draw teapot
