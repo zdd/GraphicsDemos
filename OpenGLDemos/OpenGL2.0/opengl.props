@@ -3,13 +3,13 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
-    <IncludePath>../utilities/soil/src;../utilities/glm-0.9.5.3;../utilities/glut37/include;../utilities/glew-1.10.0/include;$(IncludePath)</IncludePath>
-    <LibraryPath>../utilities/soil/lib;../utilities/glut37/lib;../utilities/glew-1.10.0/lib/Release/Win32;$(LibraryPath)</LibraryPath>
+    <IncludePath>../utilities/glfw-3.0.4.bin.WIN32/include;../utilities/soil/src;../utilities/glm-0.9.5.3;../utilities/glut37/include;../utilities/glew-1.10.0/include;$(IncludePath)</IncludePath>
+    <LibraryPath>../utilities/glfw-3.0.4.bin.WIN32/lib-msvc110;../utilities/soil/lib;../utilities/glut37/lib;../utilities/glew-1.10.0/lib/Release/Win32;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup>
     <Link>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
-      <AdditionalDependencies>glew32.lib;SOIL.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;glew32.lib;SOIL.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup />
